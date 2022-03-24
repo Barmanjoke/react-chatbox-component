@@ -8,6 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Set up Node
+      uses: actions/setup-node@v2-beta
+      with:
+        node-version: 16
+        registry-url: https://npm.pkg.github.com/
+        scope: '@barmanjoke'
     - name: Install
       run: npm ci
     - name: Build
