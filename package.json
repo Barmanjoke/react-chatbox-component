@@ -10,6 +10,9 @@
     "type": "git",
     "url": "https://github.com/Barmanjoke/react-chatbox-component.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "chat component",
     "react component",
