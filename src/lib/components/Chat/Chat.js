@@ -19,8 +19,9 @@ class Chat extends React.Component {
 
   handleSendMessage = event => {
     event.preventDefault();
+    event.stopPropagation();
     const {message} = this.state;
-    this.props.onSubmit(message);
+    this.props.onSubmit(message, event);
     this.setState({message: ''});
   };
 
