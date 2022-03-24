@@ -1,0 +1,21 @@
+name: Release
+on:
+  push:
+    tags:
+      - '*'
+jobs:
+  release-spec:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Where are we?
+      id: vars
+      run: |
+        echo ::set-output name=tag::${GITHUB_REF#refs/*/}
+        echo ::set-output name=repo::$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]')
+    - name: Install
+      run: npm ci
+    - name: Build
+      run: npm run build
+    - name: Publish to GHPR
+      run: npm publish
