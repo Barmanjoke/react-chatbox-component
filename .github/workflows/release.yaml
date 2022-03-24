@@ -17,7 +17,7 @@ jobs:
       run: npm ci
     - name: Build
       run: npm run build
-    - name: Publish to GHPR
-      run: npm publish
-      env:
-        NODE_AUTH_TOKEN: ${{secrets.NPM_REGISTRY_TOKEN}}
+    - name: Publish to NPM
+      uses: JS-DevTools/npm-publish@v1
+      with:
+        token: ${{secrets.NPM_REGISTRY_TOKEN}}
