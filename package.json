@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/Barmanjoke/react-chatbox-component#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.8",
     "react": "^17.0",
     "react-dom": "^17.0",
     "react-scripts": "^2.1.3",
