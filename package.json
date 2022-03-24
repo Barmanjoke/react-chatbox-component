@@ -1,6 +1,6 @@
 {
   "name": "@barmanjoke/react-chatbox-component",
-  "version": "0.0.6-pre.1",
+  "version": "0.0.6-pre.2",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": [
